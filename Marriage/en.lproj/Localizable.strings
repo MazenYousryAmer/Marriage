@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Marriage
+
+  Created by ZooZoo on 6/11/16.
+  Copyright © 2016 ZooZoo. All rights reserved.
+*/
+
+// General
+"ok" = "Ok";
+"cancel" = "Cancel";
+"internetError" = "Unable to connect with the server. Check your internet connection and try again.";
+"connectionError" = "Connection error";
+"tryAgain" = "Try again";
+"error" = "Error";
+
+// Login vc
+"nameError" = "Please enter a name.";
+"passError" = "Please enter a pass.";
+"unauthorizedAccess" = "Unauthorized access.";
+"denied" = "Access denied.";
+"handshakeError" = "Cound not perfoem handshake with the server.";
+"nameOrPassError" = "Username or password is not correct.";
+
+// Register vc
+"registerNameError" = "Unable to register with no name.";
+"registerPassError" = "Unable to register with no pass.";
+"registerMailError" = "Unable to register with no mail.";
+"success" = "Succesfull";
+"unknownError" = "An error has occured during registration.";
+"existError" = "This email already exists.";
+"registerSuccess" = "You have registered succesfully.";
+
+// Side Menu vc
+"welcome" = "Welcome";
+
+// Inspiration
+"added" = "the article is added successfully to your favourate list";
+"exist" = "the article already exists in you favourate list";
+"unknown" = "Unknown error occured";
+"inspire" = "Inspiration";
+"favourate" = "Favourate";
