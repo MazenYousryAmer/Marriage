@@ -31,7 +31,7 @@ class InspirationViewController: ParentViewController , UITableViewDataSource , 
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.menuContainerViewController.panMode = MFSideMenuPanModeNone
+//        self.menuContainerViewController.panMode = MFSideMenuPanModeNone
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .search, target: self, action: #selector(InspirationViewController.searchBtnPressed))
         
         //side search bar

@@ -10,13 +10,19 @@ import UIKit
 
 class SideViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
 
+    //MARK: - iboutlets
     @IBOutlet var tableMenu : UITableView!
     @IBOutlet var lblWelcome : UILabel!
     @IBOutlet var lblName : UILabel!
     @IBOutlet var imgProfile : UIImageView!
-    var arrMenuTxt : [String] = ["Home" , "Check List" , "Budget List" , "Guest List" , "Settings"]
-    var arrMenuImg : [String] = ["IconHome" , "IconCheckList" , "IconBudgetList" , "IconGuestList" , "IconSettings"]
     
+    //MARK: - variables
+//    var arrMenuTxt : [String] = ["Home" , "Check List" , "Budget List" , "Guest List" , "Settings"]
+//    var arrMenuImg : [String] = ["IconHome" , "IconCheckList" , "IconBudgetList" , "IconGuestList" , "IconSettings"]
+    var arrMenuTxt : [String] = ["DRESSES" , "RINGS" , "WEDDING PLANNING" , "HONEY MOONS" , "INSPIRATIONS" , "MY FAVOURITES" , "SETTINGS"]
+    var indexSelected : Int? = 0
+    
+    //MARK: - view
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,9 +55,30 @@ class SideViewController: UIViewController , UITableViewDelegate , UITableViewDa
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! SideMenuTableViewCell
         cell.lblMenu.text = self.arrMenuTxt[indexPath.row]
-        cell.imgMenu.image = UIImage(named: self.arrMenuImg[indexPath.row])
+//        cell.imgMenu.image = UIImage(named: self.arrMenuImg[indexPath.row])
+        if (self.indexSelected == indexPath.row)
+        {
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.viewMenu.backgroundColor = pinkColor
+            })
+        }
+        else
+        {
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.viewMenu.backgroundColor = UIColor.white
+            })
+        }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexSelected = nil
+        UIView.animate(withDuration: 0, animations: {
+            self.tableMenu.reloadData()
+        }, completion: {_ in
+            self.indexSelected = indexPath.row
+            self.tableMenu.reloadData()
+        })    }
 
     /*
     // MARK: - Navigation
