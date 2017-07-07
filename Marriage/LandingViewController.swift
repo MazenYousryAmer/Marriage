@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FacebookLogin
+import FacebookCore
 
 class LandingViewController: ParentViewController {
     
@@ -39,6 +41,9 @@ class LandingViewController: ParentViewController {
         
 //        let url = NSBundle.mainBundle().URLForResource("Lady", withExtension: "gif")
 //        self.img.image = UIImage.animatedImageWithAnimatedGIFData(NSData.init(contentsOfURL: url!)!)
+        
+        self.btnFacebook.addTarget(self, action: #selector(self.loginButtonClicked), for: UIControlEvents.touchUpInside)
+
     
     }
     
@@ -333,6 +338,43 @@ class LandingViewController: ParentViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    @objc func loginButtonClicked() {
+        let loginManager = LoginManager()
+        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+            switch loginResult {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("User cancelled login.")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Logged in!")
+                
+                let connection = GraphRequestConnection()
+                connection.add(GraphRequest(graphPath: "/me" , parameters: ["fields": "name,email,first_name,last_name,picture.type(small),gender"])) { httpResponse, result in
+                    switch result {
+                    case .success(let response):
+                        print("Graph Request Succeeded: \(response)")
+                    case .failed(let error):
+                        print("Graph Request Failed: \(error)")
+                    }
+                }
+                connection.start()
+            }
+        }
+        //        loginManager.logIn([.publicProfile], viewController: self, completion: { loginResult in
+        //
+        //            switch loginResult{
+        //                            case .Failed(let error):
+        //                                print(error)
+        //                            case .Cancelled:
+        //                                print("User cancelled login.")
+        //                            case .Success(let grantedPermissions, let declinedPermissions, let accessToken):
+        //                                print("Logged in!")
+        //                            }
+        //            }
+        //        )
+    }
+
 
     
     //MARK:- Navigation
