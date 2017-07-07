@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C22070C1EECB4C300ED6124 /* RequestResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22070B1EECB4C300ED6124 /* RequestResponseObject.m */; };
+		5CD62CAE1F0FE2E100DA133D /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62CAD1F0FE2E100DA133D /* TestingViewController.swift */; };
 		85F23E9C86A980BA397E85BE /* Pods_Marriage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4129F3F936736B9B60EEF8 /* Pods_Marriage.framework */; };
 		90034EE61E2289C30049A339 /* DetailedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90034EE51E2289C30049A339 /* DetailedImageViewController.swift */; };
 		900E6E5B1E11E75100CB9A0E /* DetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E6E5A1E11E75100CB9A0E /* DetailsProtocol.swift */; };
@@ -56,6 +57,8 @@
 		1B2AD98C7A83C1C080B61C37 /* Pods-Marriage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marriage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marriage/Pods-Marriage.release.xcconfig"; sourceTree = "<group>"; };
 		5C22070A1EECB4C300ED6124 /* RequestResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestResponseObject.h; sourceTree = "<group>"; };
 		5C22070B1EECB4C300ED6124 /* RequestResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestResponseObject.m; sourceTree = "<group>"; };
+		5CD62CAC1F0FE26A00DA133D /* Marriage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marriage.entitlements; sourceTree = "<group>"; };
+		5CD62CAD1F0FE2E100DA133D /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		75BAECCD9C4BC5784605344E /* Pods-Marriage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marriage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marriage/Pods-Marriage.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4129F3F936736B9B60EEF8 /* Pods_Marriage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marriage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90034EE51E2289C30049A339 /* DetailedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedImageViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				90A254A51CEA4A4000F134FA /* AppDelegate.swift */,
+				5CD62CAD1F0FE2E100DA133D /* TestingViewController.swift */,
 			);
 			name = "0 - AppDelegate";
 			sourceTree = "<group>";
@@ -288,6 +292,7 @@
 		90A254A41CEA4A4000F134FA /* Marriage */ = {
 			isa = PBXGroup;
 			children = (
+				5CD62CAC1F0FE26A00DA133D /* Marriage.entitlements */,
 				90A254A91CEA4A4000F134FA /* Main.storyboard */,
 				907209A41CEFA77700F6D2D3 /* Marriage-Bridging-Header.h */,
 				9043E7411D439D49005B184E /* GIF Animating Image View */,
@@ -447,7 +452,13 @@
 				TargetAttributes = {
 					90A254A11CEA4A4000F134FA = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = QF556TDCLA;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -546,6 +557,7 @@
 				90F6483F1D14573700E6A8FB /* HomeTableViewCell.swift in Sources */,
 				90A296EB1D457470000C82BC /* InspirationViewController.swift in Sources */,
 				90F648391D142AF700E6A8FB /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				5CD62CAE1F0FE2E100DA133D /* TestingViewController.swift in Sources */,
 				907209B51CEFA77800F6D2D3 /* MyJSONParser.m in Sources */,
 				90FE42071D60852A009F2757 /* InspirationDetailsViewController.swift in Sources */,
 				90D880E51D6DED8A00745A46 /* RTLabel.m in Sources */,
@@ -694,7 +706,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Marriage/Marriage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QF556TDCLA;
 				INFOPLIST_FILE = Marriage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marriage.A2Z;
@@ -711,7 +725,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Marriage/Marriage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QF556TDCLA;
 				INFOPLIST_FILE = Marriage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marriage.A2Z;

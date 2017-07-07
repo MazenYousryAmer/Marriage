@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Pha-1e-bir">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="RYk-W2-ewE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -948,6 +948,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LX7-e1-Cx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="732" y="-349"/>
+        </scene>
+        <!--Testing View Controller-->
+        <scene sceneID="Pyd-oY-sPH">
+            <objects>
+                <viewController id="RYk-W2-ewE" customClass="TestingViewController" customModule="Marriage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opq-7G-C7b"/>
+                        <viewControllerLayoutGuide type="bottom" id="osN-hb-BFQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mim-Nm-Mtb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-P4-nZR">
+                                <rect key="frame" x="93" y="318.5" width="189" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U8F-Wo-kxO"/>
+                                    <constraint firstAttribute="width" constant="189" id="uJQ-s5-FIj"/>
+                                </constraints>
+                                <state key="normal" title="Facebook login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y3o-P4-nZR" firstAttribute="centerX" secondItem="mim-Nm-Mtb" secondAttribute="centerX" id="9bc-mf-VVx"/>
+                            <constraint firstItem="Y3o-P4-nZR" firstAttribute="centerY" secondItem="mim-Nm-Mtb" secondAttribute="centerY" id="ceu-q3-77N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testBtnLogin" destination="Y3o-P4-nZR" id="9Tr-WZ-dKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a6-5U-FmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288.5" y="340.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r13-qP-0Cy">
