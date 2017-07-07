@@ -14,7 +14,7 @@ class LandingViewController: ParentViewController {
     
     //MARK:- IBOutlets
     @IBOutlet var lblError: UILabel!
-    @IBOutlet var txtName: UITextField!
+    @IBOutlet var txtName: UITextField!  // This label name & value should be email as we enter our email not our name
     @IBOutlet var txtPass: UITextField!
     @IBOutlet var btnLogin: UIButton!
     @IBOutlet var btnRegister: UIButton!
