@@ -14,7 +14,7 @@ class SideViewController: UIViewController , UITableViewDelegate , UITableViewDa
     @IBOutlet var tableMenu : UITableView!
     @IBOutlet var lblWelcome : UILabel!
     @IBOutlet var lblName : UILabel!
-    @IBOutlet var imgProfile : UIImageView!
+    @IBOutlet var imgProfile : AsyncImageView!
     
     //MARK: - variables
 //    var arrMenuTxt : [String] = ["Home" , "Check List" , "Budget List" , "Guest List" , "Settings"]

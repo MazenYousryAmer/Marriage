@@ -306,6 +306,7 @@ class LandingViewController: ParentViewController {
                         let sideVc = self.storyboard?.instantiateViewController(withIdentifier: "SideViewController")
                         
                         let containerVC = MFSideMenuContainerViewController.container(withCenter: homeNav, leftMenuViewController: sideVc, rightMenuViewController: nil)
+                        containerVC?.panMode = MFSideMenuPanModeNone;
                         delegate?.window?.rootViewController = containerVC
                         
                     }

@@ -144,13 +144,16 @@ class InspirationDetailsViewController: ParentViewController , UITableViewDataSo
     //MARK: - ibaction
     @IBAction func shareBtnPressed(_ sender: AnyObject)
     {
-        let firstActivityItem = self.dictItem["ArtSubject2"]
+        let firstActivityItem = self.dictItem["ArtSubject"] as? String
 //        let secondActivityItem : NSURL = NSURL(string: "http//:urlyouwant")!
 //        // If you want to put an image
 //        let image : UIImage = UIImage(named: "image.jpg")!
+        let stringURL = "http://164.160.104.7/ma2z_php/shop/wedding/html/english/articles/details/" + (firstActivityItem?.lowercased().replacingOccurrences(of: " ", with: "-"))! + "-\(String(describing: self.dictItem["ArtID_FK"]!))" + ".php"
+        let shareURL : NSURL = NSURL(string: stringURL)!
+        print(stringURL)
         
         let activityViewController : UIActivityViewController = UIActivityViewController(
-            activityItems: [firstActivityItem!], applicationActivities: nil)
+            activityItems: [firstActivityItem! , shareURL], applicationActivities: nil)
         self.present(activityViewController, animated: true, completion: nil)
     }
     
