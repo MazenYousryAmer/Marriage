@@ -451,6 +451,7 @@
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = QF556TDCLA;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -709,6 +710,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marriage.A2Z;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8279ac23-67ab-4549-82ce-7907668b711b";
+				PROVISIONING_PROFILE_SPECIFIER = MarriageDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "Marriage/Marriage-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -723,11 +726,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Marriage/Marriage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = QF556TDCLA;
 				INFOPLIST_FILE = Marriage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marriage.A2Z;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5ecf31a3-af93-4936-bc51-103b6a5ee4a0";
+				PROVISIONING_PROFILE_SPECIFIER = MarriageDis;
 				SWIFT_OBJC_BRIDGING_HEADER = "Marriage/Marriage-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
